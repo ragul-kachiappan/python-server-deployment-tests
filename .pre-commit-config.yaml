@@ -1,0 +1,12 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.14.10
+    hooks:
+      # Linting (includes isort via I rules)
+      - id: ruff
+        types_or: [python, pyi, jupyter]
+        args: ["check", "--fix"]
+      
+      # Formatting (replaces Black)
+      - id: ruff-format
+        types_or: [python, pyi, jupyter]
